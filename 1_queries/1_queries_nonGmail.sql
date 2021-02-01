@@ -1,9 +1,10 @@
 SELECT
   name,
   email,
+  id,
   cohort_id
 FROM
   students
 WHERE
-  github IS NULL
-  AND end_date IS NOT NULL;
+  email NOT LIKE '%GMAIL.COM'
+  AND phone IS NULL;
